@@ -2,9 +2,10 @@
   "name": "webservice",
   "version": "1.0.0",
   "description": "",
-  "main": "www/app.js",
+  "main": "app.js",
   "scripts": {
-    "build": "npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp page.json www/package.json",
+    "build": "npm run clean && tsc && cp package*.json www/",
+    "clean": "rm -rf www",
     "dev": "ts-node-dev --respawn --transpileOnly ./src/app.ts",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1",
