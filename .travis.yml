@@ -1,0 +1,13 @@
+language: minimal
+
+services:
+  - docker
+
+before_install:
+  - bash scripts/build.sh
+
+deploy:
+  provider: script
+  script: bash scripts/deploy.sh
+  on:
+    branch: master
