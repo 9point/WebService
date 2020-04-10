@@ -7,4 +7,4 @@ PACKAGE_VERSION=$(cat package.json \
   | sed 's/[",]//g' \
   | tr -d '[[:space:]]')
 
-docker build -t 9point/webservice:${PACKAGE_VERSION}
+docker build -t 9point/webservice:${PACKAGE_VERSION} .
