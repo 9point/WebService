@@ -10,4 +10,5 @@ PACKAGE_VERSION=$(cat package.json \
 docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 docker push 9point/webservice:${PACKAGE_VERSION}
+docker push 9point/webservice:latest
 
